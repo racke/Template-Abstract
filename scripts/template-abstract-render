@@ -1,0 +1,23 @@
+#! /usr/bin/env perl
+
+use strict;
+use warnings;
+
+use Getopt::Long;
+
+use FindBin;
+use lib "$FindBin::RealBin/../lib";
+use Template::Abstract;
+
+unless ( @ARGV ) {
+    die "Need input.\n";
+}
+
+my $template_abstract = Template::Abstract->new;
+
+my $output = $template_abstract->render(@ARGV);
+
+print $output;
+
+exit 0;
+
