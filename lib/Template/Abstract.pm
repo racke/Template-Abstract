@@ -5,7 +5,7 @@ use warnings;
 
 use Moo;
 use Carp qw<croak>;
-use Module::Runtime    'is_module_name';
+use Module::Runtime 'is_module_name';
 
 use Template::Abstract::Role;
 use Template::Abstract::Factory;
